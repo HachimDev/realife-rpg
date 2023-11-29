@@ -3,9 +3,12 @@ export interface IexperienceData {
   currentExp: number;
   expToNextLevel: number;
 }
-
-export interface Quest {
-  id: number;
+export interface IReward {
+  gold?: number;
+  experience: number;
+}
+export interface IQuest {
+  id: string;
   title: string;
   description?: string;
   completed: boolean;
@@ -13,8 +16,5 @@ export interface Quest {
   isWeekly: boolean;
   expirationDate: Date;
   //   type: 1 | 2 | 3;
-  rewards: {
-    gold?: number;
-    experience: number;
-  };
+  rewards: IReward;
 }

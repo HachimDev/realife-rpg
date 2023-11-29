@@ -8,14 +8,10 @@ import QuestsJournal from "../../components/QuestsJournal/QuestsJournal";
 const Home: React.FC = () => {
   const dispatch = useDispatch(); // Add dispatch from react-redux
 
-  const handleAddExp = () => {
-    dispatch(addExperience(50));
-  };
   return (
     <>
       <CharOverview />
       <QuestsJournal />
-      <Button onClick={handleAddExp}>+50exp</Button>
     </>
   );
 };

@@ -4,12 +4,14 @@ import { IexperienceData } from "../../utils/interfaces";
 interface CharacterState {
   name: string;
   stamina: number;
+  gold: number;
   experience: IexperienceData;
 }
 
 const initialState: CharacterState = {
   name: "Hachim",
   stamina: 100,
+  gold: 0,
   experience: {
     level: 1,
     currentExp: 0,
@@ -38,9 +40,12 @@ const characterSlice = createSlice({
         state.experience.expToNextLevel = NextLevel;
       }
     },
+    addGold: (state, action: PayloadAction<number>) => {
+      state.gold += action.payload;
+    },
   },
 });
 
-export const { setName, setHealth, addExperience } = characterSlice.actions;
+export const { setName, setHealth, addExperience, addGold } = characterSlice.actions;
 
 export default characterSlice.reducer;
