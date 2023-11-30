@@ -15,6 +15,6 @@ export interface IQuest {
   isDaily: boolean;
   isWeekly: boolean;
   expirationDate: Date;
-  //   type: 1 | 2 | 3;
+  type: number;
   rewards: IReward;
 }
