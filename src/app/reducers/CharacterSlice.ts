@@ -1,14 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IexperienceData } from "../../utils/interfaces";
+import { ICharacter } from "../../utils/interfaces";
 
-interface CharacterState {
-  name: string;
-  stamina: number;
-  gold: number;
-  experience: IexperienceData;
-}
-
-const initialState: CharacterState = {
+const initialState: ICharacter = {
   name: "Hachim",
   stamina: 100,
   gold: 0,
@@ -16,6 +9,13 @@ const initialState: CharacterState = {
     level: 1,
     currentExp: 0,
     expToNextLevel: 150,
+  },
+  attributes: {
+    strength: 1,
+    dexterity: 1,
+    intelect: 1,
+    charisma: 1,
+    luck: 1,
   },
 };
 

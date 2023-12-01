@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -13,13 +13,18 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import AccessibilityIcon from "@mui/icons-material/Accessibility";
 import HomeIcon from "@mui/icons-material/Home";
-import Home from "../../Pages/HomePage/Home";
-import { Routes, Route } from "react-router-dom";
 import RoutingComponent from "../RoutingComponent/RoutingComponent";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 
-export default function NavigationDrawer() {
+const NavigationDrawer: React.FC = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/home");
+  }, []);
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -72,4 +77,5 @@ export default function NavigationDrawer() {
       </Box>
     </Box>
   );
-}
+};
+export default NavigationDrawer;

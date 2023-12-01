@@ -18,3 +18,19 @@ export interface IQuest {
   type: number;
   rewards: IReward;
 }
+
+export interface IAttributes {
+  strength: number;
+  dexterity: number;
+  intelect: number;
+  charisma: number;
+  luck: number;
+}
+
+export interface ICharacter {
+  name: string;
+  stamina: number;
+  gold: number;
+  experience: IexperienceData;
+  attributes: IAttributes;
+}

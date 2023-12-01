@@ -11,6 +11,7 @@ function CharOverview() {
 
   const dispatch = useDispatch(); // Add dispatch from react-redux
   const expData = useSelector((state: RootState) => state.character.experience);
+  const goldData = useSelector((state: RootState) => state.character.gold);
 
   return (
     <Box
@@ -31,6 +32,7 @@ function CharOverview() {
             <Grid item xs={8} pr={4}>
               <Typography variant="h6">Level {expData.level} </Typography>
               <LevelingProgressBar expData={expData} />
+              <Typography variant="button"> {goldData} Gold </Typography>
             </Grid>
           </Grid>
         </CardContent>
