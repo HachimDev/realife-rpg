@@ -10,8 +10,8 @@ function CharOverview() {
   // add dispatch from characterSlice
 
   const dispatch = useDispatch(); // Add dispatch from react-redux
-  const expData = useSelector((state: RootState) => state.character.experience);
-  const goldData = useSelector((state: RootState) => state.character.gold);
+  const expData = useSelector((state: RootState) => state.user.character.experience);
+  const goldData = useSelector((state: RootState) => state.user.character.gold);
 
   return (
     <Box

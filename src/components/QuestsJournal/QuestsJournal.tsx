@@ -5,7 +5,7 @@ import { RootState } from "../../app/store";
 import { Box, Button, Card, CardContent, Typography } from "@mui/material";
 import { Item, convertQuestType } from "../../utils/fcts";
 import { completeQuest } from "../../app/reducers/QuestsSlice";
-import { addExperience, addGold } from "../../app/reducers/CharacterSlice";
+import { addExperience, addGold } from "../../app/reducers/user";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import ModalNewQuest from "./ModalNewQuest/ModalNewQuest";
 

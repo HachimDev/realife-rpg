@@ -34,3 +34,15 @@ export interface ICharacter {
   experience: IexperienceData;
   attributes: IAttributes;
 }
+export interface IUser {
+  id: string;
+  username: string;
+  email: string;
+  character: ICharacter;
+}
+
+export interface IPatchData {
+  op: string;
+  path: string;
+  value: any;
+}
